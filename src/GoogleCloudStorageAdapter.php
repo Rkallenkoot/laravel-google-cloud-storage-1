@@ -79,7 +79,7 @@ class GoogleCloudStorageAdapter extends FilesystemAdapter
         return $this->client;
     }
 
-    private function getBucket(): Bucket
+    public function getBucket(): Bucket
     {
         return $this->client->bucket(Arr::get($this->config, 'bucket'));
     }
